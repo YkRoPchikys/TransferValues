@@ -2,6 +2,34 @@
 
 Этот макрос написан на VBA и предназначен для автоматизации процесса переноса данных между Excel файлами. Он позволяет выбрать файл и лист из указанной папки, затем ищет определенные значения в столбце A и переносит найденные данные в ячейки исходной книги.
 
+## Как использовать
+
+### Импорт макроса в Excel
+
+1. **Откройте Excel**.
+2. Перейдите на вкладку **Разработчик**. Если у вас эта вкладка не отображается, включите её:
+   - Нажмите **Файл** > **Параметры**.
+   - В разделе **Настроить ленту** установите флажок **Разработчик**.
+3. Нажмите **Visual Basic** на вкладке **Разработчик**.
+4. В редакторе VBA выберите **Вставка** > **Модуль** для создания нового модуля.
+5. Скопируйте код макроса из этого репозитория и вставьте его в новый модуль.
+6. Закройте редактор VBA и вернитесь в Excel.
+7. Перейдите на вкладку **Разработчик** и нажмите **Макросы**.
+8. Выберите макрос `TransferValues` и нажмите **Запустить**.
+
+### Импорт в Личную книгу
+
+Если вы хотите использовать макрос в любой книге Excel без необходимости повторного импорта, вы можете добавить его в Личную книгу:
+
+1. Откройте Excel.
+2. Нажмите **Alt + F11**, чтобы открыть редактор VBA.
+3. Перейдите в **Личную книгу (PERSONAL.XLSB)**. Если её нет, создайте её:
+   - Нажмите **Файл** > **Новый** и выберите **Личная книга макросов**.
+4. В редакторе VBA выберите **Вставка** > **Модуль**.
+5. Скопируйте код макроса из этого репозитория и вставьте его в новый модуль.
+6. Сохраните и закройте редактор.
+7. После этого макрос будет доступен в любой новой книге Excel.
+
 ## Описание работы макроса
 
 1. **Получение списка файлов Excel**:
@@ -27,19 +55,6 @@
 7. **Завершение процесса**:
    - После успешного завершения переноса данных выводится сообщение.
 
-## Как использовать
-
-1. **Настройка пути к папке**:
-   - Откройте файл с макросом и замените строку:
-     ```vba
-     folderPath = "C:\Ваш\Путь\К\Папке\" ' ИЗМЕНИТЬ НА СВОЙ ПУТЬ
-     ```
-     на путь к папке, где находятся файлы Excel, из которых вы хотите переносить данные.
-
-2. **Запуск макроса**:
-   - Перейдите на вкладку "Разработчик" в Excel, выберите "Visual Basic", создайте новый модуль и вставьте код макроса.
-   - Запустите макрос, и следуйте инструкциям на экране для выбора файла и листа.
-
 ## Примечания
 
 - Макрос ожидает, что данные, которые нужно перенести, находятся в столбце A целевой книги.
@@ -58,11 +73,40 @@
 
 Этот проект находится в публичном доступе и распространяется под лицензией [MIT License](LICENSE).
 
+
 ________________________________________________________________________________________________________________
 
 # TransferValues - Macro for Transferring Data Between Excel Files
 
 This macro is written in VBA and is designed to automate the process of transferring data between Excel files. It allows the user to select a file and sheet from a specified folder, then searches for certain values in column A and transfers the found data into cells of the source workbook.
+
+## How to Use
+
+### Import the Macro into Excel
+
+1. **Open Excel**.
+2. Go to the **Developer** tab. If you don't see this tab, enable it by:
+   - Clicking **File** > **Options**.
+   - Under **Customize Ribbon**, check the **Developer** box.
+3. Click **Visual Basic** on the **Developer** tab.
+4. In the VBA editor, select **Insert** > **Module** to create a new module.
+5. Copy the macro code from this repository and paste it into the new module.
+6. Close the VBA editor and return to Excel.
+7. Go to the **Developer** tab and click **Macros**.
+8. Select the `TransferValues` macro and click **Run**.
+
+### Import into Personal Workbook
+
+If you want to use the macro in any Excel workbook without re-importing it, you can add it to your Personal Workbook:
+
+1. Open Excel.
+2. Press **Alt + F11** to open the VBA editor.
+3. Go to **Personal Workbook (PERSONAL.XLSB)**. If it doesn't exist, create it:
+   - Click **File** > **New** and select **Personal Macro Workbook**.
+4. In the VBA editor, select **Insert** > **Module**.
+5. Copy the macro code from this repository and paste it into the new module.
+6. Save and close the editor.
+7. After this, the macro will be available in any new Excel workbook.
 
 ## How the Macro Works
 
@@ -89,19 +133,6 @@ This macro is written in VBA and is designed to automate the process of transfer
 7. **Process Completion**:
    - A message is displayed to inform the user that the data transfer has been completed successfully.
 
-## How to Use
-
-1. **Set the Folder Path**:
-   - Open the file containing the macro and modify the following line:
-     ```vba
-     folderPath = "C:\Your\Path\To\Folder\" ' CHANGE TO YOUR FOLDER PATH
-     ```
-     Replace it with the path to the folder containing the Excel files you want to transfer data from.
-
-2. **Run the Macro**:
-   - Go to the "Developer" tab in Excel, select "Visual Basic", create a new module, and paste the macro code.
-   - Run the macro, and follow the on-screen prompts to select the file and sheet.
-
 ## Notes
 
 - The macro expects the data to be transferred from column A in the target workbook.
@@ -119,4 +150,5 @@ If values are found in the target workbook, the macro will insert them into the 
 ## License
 
 This project is open-source and distributed under the [MIT License](LICENSE).
+
 
